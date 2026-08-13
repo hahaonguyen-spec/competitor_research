@@ -1,0 +1,163 @@
+{
+  "timezone": "Asia/Ho_Chi_Minh",
+  "markets": ["ID", "TH", "PH", "VN"],
+  "sources": [
+    {
+      "id": "xm-vn-promotions",
+      "brand": "XMTrading",
+      "market": "VN",
+      "kind": "promotion",
+      "platform": "Website",
+      "url": "https://www.xmtrading.com/vn/promotions",
+      "status_hint": "live",
+      "funnel_stage": "Acquisition + Retention",
+      "summary": "Competition, loyalty points and referral mechanics presented together on the localized promotion hub.",
+      "takeaway": "Build an always-on promotion ecosystem instead of relying on a single deposit bonus."
+    },
+    {
+      "id": "xm-vn-loyalty",
+      "brand": "XMTrading",
+      "market": "VN",
+      "kind": "promotion",
+      "platform": "Website",
+      "url": "https://www.xmtrading.com/vn/promotions/loyalty-program",
+      "status_hint": "live",
+      "funnel_stage": "Retention",
+      "summary": "Five-tier XMP loyalty program with cash balance, trading bonus and VIP rewards.",
+      "takeaway": "Progressive tiers and reward choice can make delayed redemption more attractive."
+    },
+    {
+      "id": "hfm-ph-loyalty",
+      "brand": "HFM",
+      "market": "PH",
+      "kind": "promotion",
+      "platform": "Website",
+      "url": "https://www.hfm.com/int/tl/promotions/loyalty-program",
+      "status_hint": "live",
+      "funnel_stage": "Activation + Retention",
+      "summary": "Road-to-Legend loyalty journey using TRP, missions, boosters and lifestyle rewards.",
+      "takeaway": "Use missions and progress visibility to create repeat engagement, not only prize appeal."
+    },
+    {
+      "id": "xm-ph-competitions",
+      "brand": "XM",
+      "market": "PH",
+      "kind": "social_campaign",
+      "platform": "Partner / Social",
+      "url": "https://partners.xm.com/ph/social-competitions",
+      "status_hint": "live",
+      "funnel_stage": "Acquisition + Activation",
+      "summary": "Weekly demo, daily paid and weekend crypto competitions promoted through partners.",
+      "takeaway": "Demo competition can activate webinar and education leads before asking for an FTD."
+    },
+    {
+      "id": "xm-th-competitions",
+      "brand": "XM",
+      "market": "TH",
+      "kind": "social_campaign",
+      "platform": "Partner / Social",
+      "url": "https://partners.xm.com/th/social-competitions",
+      "status_hint": "live",
+      "funnel_stage": "Acquisition + Activation",
+      "summary": "Localized Thai partner campaign emphasizing recurring competitions and recognition.",
+      "takeaway": "Pair local-language education with a repeatable community competition format."
+    },
+    {
+      "id": "exness-bonus-policy",
+      "brand": "Exness",
+      "market": "SEA",
+      "kind": "positioning",
+      "platform": "Help Centre",
+      "url": "https://get.exness.help/hc/id/articles/8633840208540-Apakah-Exness-menawarkan-bonus",
+      "status_hint": "monitor",
+      "funnel_stage": "Trust + Acquisition",
+      "summary": "Exness states it does not offer joining, deposit or trading bonuses and instead highlights partner economics.",
+      "takeaway": "Trading conditions, withdrawal experience and trust can outperform bonus-led positioning."
+    },
+    {
+      "id": "vantage-world-cup-social-2026",
+      "brand": "Vantage",
+      "market": "SEA",
+      "kind": "social_campaign",
+      "platform": "Social",
+      "url": "https://www.vantagemarkets.com/pdf/own-the-moment-world-cup-2026-social-activity-tnc-June2026.pdf",
+      "status_hint": "ended",
+      "funnel_stage": "Awareness + Engagement",
+      "summary": "World Cup social activity based on liking and sharing an official promotion post; ended 15 July 2026.",
+      "takeaway": "Event-led social mechanics can lift reach, but campaign expiry must be visible in reporting."
+    },
+    {
+      "id": "bappebti-broker-list",
+      "brand": "Regulator",
+      "market": "ID",
+      "kind": "compliance",
+      "platform": "Bappebti",
+      "url": "https://dev-sinergi.bappebti.go.id/pbk/menu-pialang",
+      "status_hint": "monitor",
+      "funnel_stage": "Risk control",
+      "summary": "Official Indonesian futures broker status list.",
+      "takeaway": "Separate global brand awareness from local entity and marketing authorization."
+    },
+    {
+      "id": "thai-sec-alerts",
+      "brand": "Regulator",
+      "market": "TH",
+      "kind": "compliance",
+      "platform": "Thai SEC",
+      "url": "https://market.sec.or.th/public/idisc/en/InvestorAlert",
+      "status_hint": "monitor",
+      "funnel_stage": "Risk control",
+      "summary": "Official Thai investor-alert register for unauthorized investment and derivative activity.",
+      "takeaway": "Validate solicitation rights before adapting an offshore broker campaign."
+    },
+    {
+      "id": "ph-sec-advisories",
+      "brand": "Regulator",
+      "market": "PH",
+      "kind": "compliance",
+      "platform": "Philippines SEC",
+      "url": "https://appointment.sec.gov.ph/investors-education-and-information/advisories/",
+      "status_hint": "monitor",
+      "funnel_stage": "Risk control",
+      "summary": "Official Philippines SEC advisories, including historical forex and investment-solicitation warnings.",
+      "takeaway": "Treat affiliate recruitment and public solicitation as high-risk until Legal confirms the entity route."
+    },
+    {
+      "id": "vn-mps-investment-warning",
+      "brand": "Regulator",
+      "market": "VN",
+      "kind": "compliance",
+      "platform": "Vietnam MPS",
+      "url": "https://mps.gov.vn/hoi-dap/chi-tiet-cau-hoi/5c8ecbf0-d6c1-411f-ba77-73d27e9c0535?page=%2F",
+      "status_hint": "monitor",
+      "funnel_stage": "Risk control",
+      "summary": "Vietnamese authority warning about online financial and virtual-investment solicitation tactics.",
+      "takeaway": "Use trust proof and education; avoid guaranteed-profit language and unverifiable social proof."
+    }
+  ],
+  "news_feeds": [
+    {
+      "id": "news-id",
+      "market": "ID",
+      "url": "https://news.google.com/rss/search?q=forex%20broker%20Indonesia%20promotion%20OR%20campaign&hl=id&gl=ID&ceid=ID:id"
+    },
+    {
+      "id": "news-th",
+      "market": "TH",
+      "url": "https://news.google.com/rss/search?q=forex%20broker%20Thailand%20promotion%20OR%20campaign&hl=th&gl=TH&ceid=TH:th"
+    },
+    {
+      "id": "news-ph",
+      "market": "PH",
+      "url": "https://news.google.com/rss/search?q=forex%20broker%20Philippines%20promotion%20OR%20campaign&hl=en-PH&gl=PH&ceid=PH:en"
+    },
+    {
+      "id": "news-vn",
+      "market": "VN",
+      "url": "https://news.google.com/rss/search?q=forex%20broker%20Vietnam%20promotion%20OR%20campaign&hl=vi&gl=VN&ceid=VN:vi"
+    }
+  ],
+  "youtube_channels": [],
+  "meta_pages": []
+}
+

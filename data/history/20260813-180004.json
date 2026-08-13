@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-08-13T16:00:00+07:00",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "scan_health": {"sources_total": 11, "sources_ok": 11, "sources_failed": 0, "new_signals": 7},
+  "items": [
+    {
+      "id": "xm-vn-promotions", "brand": "XMTrading", "market": "VN", "kind": "promotion", "platform": "Website",
+      "title": "XMTrading promotion ecosystem", "url": "https://www.xmtrading.com/vn/promotions", "observed_at": "2026-08-13T16:00:00+07:00",
+      "status": "live", "source_confidence": "official", "funnel_stage": "Acquisition + Retention", "signal_score": 91,
+      "summary": "Competition, loyalty points and referral mechanics are presented together on the localized promotion hub.",
+      "takeaway": "Build an always-on promotion ecosystem instead of relying on a single deposit bonus.",
+      "metrics": {"views": null, "reactions": null, "comments": null, "shares": null}
+    },
+    {
+      "id": "xm-vn-loyalty", "brand": "XMTrading", "market": "VN", "kind": "promotion", "platform": "Website",
+      "title": "Five-tier XMP loyalty program", "url": "https://www.xmtrading.com/vn/promotions/loyalty-program", "observed_at": "2026-08-13T16:00:00+07:00",
+      "status": "live", "source_confidence": "official", "funnel_stage": "Retention", "signal_score": 94,
+      "summary": "Five tiers, up to 3x points, withdrawable balance, trading bonus and VIP rewards; XMP expires after one year.",
+      "takeaway": "Progressive tiers and reward choice can make delayed redemption more attractive.",
+      "metrics": {"views": null, "reactions": null, "comments": null, "shares": null}
+    },
+    {
+      "id": "hfm-ph-loyalty", "brand": "HFM", "market": "PH", "kind": "promotion", "platform": "Website",
+      "title": "HFM Road to Legend loyalty journey", "url": "https://www.hfm.com/int/tl/promotions/loyalty-program", "observed_at": "2026-08-13T16:00:00+07:00",
+      "status": "live", "source_confidence": "official", "funnel_stage": "Activation + Retention", "signal_score": 92,
+      "summary": "TRP points, missions, boosters, levels and lifestyle rewards create a gamified retention system.",
+      "takeaway": "Use missions and progress visibility to create repeat engagement, not only prize appeal.",
+      "metrics": {"views": null, "reactions": null, "comments": null, "shares": null}
+    },
+    {
+      "id": "xm-ph-competitions", "brand": "XM", "market": "PH", "kind": "social_campaign", "platform": "Partner / Social",
+      "title": "Weekly demo, daily and crypto competitions", "url": "https://partners.xm.com/ph/social-competitions", "observed_at": "2026-08-13T16:00:00+07:00",
+      "status": "live", "source_confidence": "official", "funnel_stage": "Acquisition + Activation", "signal_score": 89,
+      "summary": "Free weekly demo competitions, paid daily arenas and weekend crypto competitions are distributed through partners.",
+      "takeaway": "Use a demo challenge to activate education leads before asking for an FTD.",
+      "metrics": {"views": null, "reactions": null, "comments": null, "shares": null}
+    },
+    {
+      "id": "xm-th-competitions", "brand": "XM", "market": "TH", "kind": "social_campaign", "platform": "Partner / Social",
+      "title": "Localized Thai trading competitions", "url": "https://partners.xm.com/th/social-competitions", "observed_at": "2026-08-13T16:00:00+07:00",
+      "status": "live", "source_confidence": "official", "funnel_stage": "Acquisition + Activation", "signal_score": 87,
+      "summary": "Thai-language partner campaign focuses on recurring participation, skills and leaderboard recognition.",
+      "takeaway": "Pair local-language education with a repeatable community competition format.",
+      "metrics": {"views": null, "reactions": null, "comments": null, "shares": null}
+    },
+    {
+      "id": "exness-bonus-policy", "brand": "Exness", "market": "SEA", "kind": "positioning", "platform": "Help Centre",
+      "title": "No joining, deposit or trading bonus", "url": "https://get.exness.help/hc/id/articles/8633840208540-Apakah-Exness-menawarkan-bonus", "observed_at": "2026-08-13T16:00:00+07:00",
+      "status": "monitor", "source_confidence": "official", "funnel_stage": "Trust + Acquisition", "signal_score": 82,
+      "summary": "Exness explicitly rejects bonus-led acquisition and points users toward affiliate and IB economics.",
+      "takeaway": "Trading conditions, withdrawal experience and trust can outperform bonus-led positioning.",
+      "metrics": {"views": null, "reactions": null, "comments": null, "shares": null}
+    },
+    {
+      "id": "vantage-world-cup-social-2026", "brand": "Vantage", "market": "SEA", "kind": "social_campaign", "platform": "Social",
+      "title": "Own the Moment World Cup social activity", "url": "https://www.vantagemarkets.com/pdf/own-the-moment-world-cup-2026-social-activity-tnc-June2026.pdf", "observed_at": "2026-08-13T16:00:00+07:00",
+      "status": "ended", "source_confidence": "official", "funnel_stage": "Awareness + Engagement", "signal_score": 68,
+      "summary": "Like-and-share activity around an official World Cup promotion post; the terms ended on 15 July 2026.",
+      "takeaway": "Event-led social mechanics can lift reach, but campaign expiry must be visible in reporting.",
+      "metrics": {"views": null, "reactions": null, "comments": null, "shares": null}
+    }
+  ],
+  "strategies": [
+    {
+      "name": "Local Market Intelligence Studio", "horizon": "0–30 days", "owner": "Regional Marketing + Local PIC",
+      "objective": "Turn observed competitor signals into localized content and landing-page tests.",
+      "kpis": ["CPQL", "KYC rate", "Qualified lead rate"], "decision": "Approve one 30-day content pilot per priority market."
+    },
+    {
+      "name": "Activation & Retention Missions", "horizon": "30–60 days", "owner": "CRM + Product + Compliance",
+      "objective": "Test mission-based onboarding and progressive rewards against a non-incentivized cohort.",
+      "kpis": ["FTD to Active", "D30 retention", "Contribution margin"], "decision": "Confirm reward ceiling and fraud controls."
+    },
+    {
+      "name": "Creator & IB Governance Engine", "horizon": "45–90 days", "owner": "Partnerships + Compliance",
+      "objective": "Give partners approved claims, templates, tracking links and a quality scorecard.",
+      "kpis": ["Qualified FTD", "Active client rate", "Margin by partner"], "decision": "Assign partner-data owner and review cadence."
+    }
+  ]
+}
+

@@ -1,0 +1,390 @@
+{
+  "generated_at": "2026-08-13T17:59:24+07:00",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "scan_health": {
+    "sources_total": 15,
+    "sources_ok": 7,
+    "sources_failed": 8,
+    "changed_sources": 0,
+    "new_signals": 6,
+    "failures": [
+      {
+        "id": "xm-vn-promotions",
+        "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+      },
+      {
+        "id": "xm-vn-loyalty",
+        "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+      },
+      {
+        "id": "hfm-ph-loyalty",
+        "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+      },
+      {
+        "id": "xm-ph-competitions",
+        "error": "403 Client Error: Forbidden for url: https://partners.xm.com/ph/social-competitions"
+      },
+      {
+        "id": "xm-th-competitions",
+        "error": "403 Client Error: Forbidden for url: https://partners.xm.com/th/social-competitions"
+      },
+      {
+        "id": "exness-bonus-policy",
+        "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+      },
+      {
+        "id": "vantage-world-cup-social-2026",
+        "error": "403 Client Error: Forbidden for url: https://www.vantagemarkets.com/pdf/own-the-moment-world-cup-2026-social-activity-tnc-June2026.pdf"
+      },
+      {
+        "id": "bappebti-broker-list",
+        "error": "HTTPSConnectionPool(host='dev-sinergi.bappebti.go.id', port=443): Max retries exceeded with url: /pbk/menu-pialang (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has "
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "xm-vn-loyalty",
+      "brand": "XMTrading",
+      "market": "VN",
+      "kind": "promotion",
+      "platform": "Website",
+      "title": "Five-tier XMP loyalty program",
+      "url": "https://www.xmtrading.com/vn/promotions/loyalty-program",
+      "observed_at": "2026-08-13T17:59:24+07:00",
+      "status": "live",
+      "source_confidence": "official",
+      "funnel_stage": "Retention",
+      "signal_score": 94,
+      "summary": "Five tiers, up to 3x points, withdrawable balance, trading bonus and VIP rewards; XMP expires after one year.",
+      "takeaway": "Progressive tiers and reward choice can make delayed redemption more attractive.",
+      "metrics": {
+        "views": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null
+      },
+      "last_error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    {
+      "id": "hfm-ph-loyalty",
+      "brand": "HFM",
+      "market": "PH",
+      "kind": "promotion",
+      "platform": "Website",
+      "title": "HFM Road to Legend loyalty journey",
+      "url": "https://www.hfm.com/int/tl/promotions/loyalty-program",
+      "observed_at": "2026-08-13T17:59:24+07:00",
+      "status": "live",
+      "source_confidence": "official",
+      "funnel_stage": "Activation + Retention",
+      "signal_score": 92,
+      "summary": "TRP points, missions, boosters, levels and lifestyle rewards create a gamified retention system.",
+      "takeaway": "Use missions and progress visibility to create repeat engagement, not only prize appeal.",
+      "metrics": {
+        "views": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null
+      },
+      "last_error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    {
+      "id": "xm-vn-promotions",
+      "brand": "XMTrading",
+      "market": "VN",
+      "kind": "promotion",
+      "platform": "Website",
+      "title": "XMTrading promotion ecosystem",
+      "url": "https://www.xmtrading.com/vn/promotions",
+      "observed_at": "2026-08-13T17:59:24+07:00",
+      "status": "live",
+      "source_confidence": "official",
+      "funnel_stage": "Acquisition + Retention",
+      "signal_score": 91,
+      "summary": "Competition, loyalty points and referral mechanics are presented together on the localized promotion hub.",
+      "takeaway": "Build an always-on promotion ecosystem instead of relying on a single deposit bonus.",
+      "metrics": {
+        "views": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null
+      },
+      "last_error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    {
+      "id": "xm-ph-competitions",
+      "brand": "XM",
+      "market": "PH",
+      "kind": "social_campaign",
+      "platform": "Partner / Social",
+      "title": "Weekly demo, daily and crypto competitions",
+      "url": "https://partners.xm.com/ph/social-competitions",
+      "observed_at": "2026-08-13T17:59:24+07:00",
+      "status": "live",
+      "source_confidence": "official",
+      "funnel_stage": "Acquisition + Activation",
+      "signal_score": 89,
+      "summary": "Free weekly demo competitions, paid daily arenas and weekend crypto competitions are distributed through partners.",
+      "takeaway": "Use a demo challenge to activate education leads before asking for an FTD.",
+      "metrics": {
+        "views": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null
+      },
+      "last_error": "403 Client Error: Forbidden for url: https://partners.xm.com/ph/social-competitions"
+    },
+    {
+      "id": "xm-th-competitions",
+      "brand": "XM",
+      "market": "TH",
+      "kind": "social_campaign",
+      "platform": "Partner / Social",
+      "title": "Localized Thai trading competitions",
+      "url": "https://partners.xm.com/th/social-competitions",
+      "observed_at": "2026-08-13T17:59:24+07:00",
+      "status": "live",
+      "source_confidence": "official",
+      "funnel_stage": "Acquisition + Activation",
+      "signal_score": 87,
+      "summary": "Thai-language partner campaign focuses on recurring participation, skills and leaderboard recognition.",
+      "takeaway": "Pair local-language education with a repeatable community competition format.",
+      "metrics": {
+        "views": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null
+      },
+      "last_error": "403 Client Error: Forbidden for url: https://partners.xm.com/th/social-competitions"
+    },
+    {
+      "id": "exness-bonus-policy",
+      "brand": "Exness",
+      "market": "SEA",
+      "kind": "positioning",
+      "platform": "Help Centre",
+      "title": "No joining, deposit or trading bonus",
+      "url": "https://get.exness.help/hc/id/articles/8633840208540-Apakah-Exness-menawarkan-bonus",
+      "observed_at": "2026-08-13T17:59:24+07:00",
+      "status": "monitor",
+      "source_confidence": "official",
+      "funnel_stage": "Trust + Acquisition",
+      "signal_score": 82,
+      "summary": "Exness explicitly rejects bonus-led acquisition and points users toward affiliate and IB economics.",
+      "takeaway": "Trading conditions, withdrawal experience and trust can outperform bonus-led positioning.",
+      "metrics": {
+        "views": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null
+      },
+      "last_error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    {
+      "id": "thai-sec-alerts",
+      "brand": "Regulator",
+      "market": "TH",
+      "kind": "compliance",
+      "platform": "Thai SEC",
+      "title": "Investor Alert",
+      "url": "https://market.sec.or.th/public/idisc/en/InvestorAlert",
+      "observed_at": "2026-08-13T17:59:24+07:00",
+      "status": "monitor",
+      "source_confidence": "official",
+      "funnel_stage": "Risk control",
+      "summary": "Official Thai investor-alert register for unauthorized investment and derivative activity.",
+      "takeaway": "Validate solicitation rights before adapting an offshore broker campaign.",
+      "metrics": {
+        "views": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null
+      },
+      "content_hash": "75f884b6445840c7b1ba8d706ddbe2b4a0d6deb9357182bae91537151272c85d",
+      "changed": false,
+      "http_status": 200,
+      "signal_score": 70
+    },
+    {
+      "id": "ph-sec-advisories",
+      "brand": "Regulator",
+      "market": "PH",
+      "kind": "compliance",
+      "platform": "Philippines SEC",
+      "title": "Advisories - Securities and Exchange Commission Appointment System",
+      "url": "https://appointment.sec.gov.ph/investors-education-and-information/advisories/",
+      "observed_at": "2026-08-13T17:59:24+07:00",
+      "status": "monitor",
+      "source_confidence": "official",
+      "funnel_stage": "Risk control",
+      "summary": "Official Philippines SEC advisories, including historical forex and investment-solicitation warnings.",
+      "takeaway": "Treat affiliate recruitment and public solicitation as high-risk until Legal confirms the entity route.",
+      "metrics": {
+        "views": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null
+      },
+      "content_hash": "516e43a3ca3ef6cca5251739f032ffccce40ee728f5420335181289e47baa396",
+      "changed": false,
+      "http_status": 200,
+      "signal_score": 70
+    },
+    {
+      "id": "vn-mps-investment-warning",
+      "brand": "Regulator",
+      "market": "VN",
+      "kind": "compliance",
+      "platform": "Vietnam MPS",
+      "title": "Cảnh báo các phương thức, thủ đoạn dụ dỗ người dân tham gia đầu tư tài chính, sàn chứng khoán ảo, tiền ảo trên không gian mạng",
+      "url": "https://mps.gov.vn/hoi-dap/chi-tiet-cau-hoi/5c8ecbf0-d6c1-411f-ba77-73d27e9c0535?page=%2F",
+      "observed_at": "2026-08-13T17:59:24+07:00",
+      "status": "monitor",
+      "source_confidence": "official",
+      "funnel_stage": "Risk control",
+      "summary": "Vietnamese authority warning about online financial and virtual-investment solicitation tactics.",
+      "takeaway": "Use trust proof and education; avoid guaranteed-profit language and unverifiable social proof.",
+      "metrics": {
+        "views": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null
+      },
+      "content_hash": "8d00444cf62657ef6eadf5c1440b147286c0379fe67e3bbadfb14baad15fdd5e",
+      "changed": false,
+      "http_status": 200,
+      "signal_score": 70
+    },
+    {
+      "id": "vantage-world-cup-social-2026",
+      "brand": "Vantage",
+      "market": "SEA",
+      "kind": "social_campaign",
+      "platform": "Social",
+      "title": "Own the Moment World Cup social activity",
+      "url": "https://www.vantagemarkets.com/pdf/own-the-moment-world-cup-2026-social-activity-tnc-June2026.pdf",
+      "observed_at": "2026-08-13T17:59:24+07:00",
+      "status": "ended",
+      "source_confidence": "official",
+      "funnel_stage": "Awareness + Engagement",
+      "signal_score": 68,
+      "summary": "Like-and-share activity around an official World Cup promotion post; the terms ended on 15 July 2026.",
+      "takeaway": "Event-led social mechanics can lift reach, but campaign expiry must be visible in reporting.",
+      "metrics": {
+        "views": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null
+      },
+      "last_error": "403 Client Error: Forbidden for url: https://www.vantagemarkets.com/pdf/own-the-moment-world-cup-2026-social-activity-tnc-June2026.pdf"
+    },
+    {
+      "id": "news-bec824b58103",
+      "brand": "Industry signal",
+      "market": "ID",
+      "kind": "news_signal",
+      "platform": "News RSS",
+      "title": "Traders Trust menawarkan Cashback Komisi Nol selama 30 hari untuk akun Pro dan VIP - tradersunion.com",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQUHJ0REJ2ZUlTV1JySUZmaEpaMmdBREpLRWZmLVR0RlNLWVViMll5cm9faUFZZ2xsbER4NlJxUF9EZzNfRWhSeDhUc2Y4S0JoV3BvREsxalhrY2JNSE5kVWxYNmFZZDFIODlkN1R1OVdab280Z2ZyTFdTelNlQmlfRmJxOGVuZVp4Y240Sk5wUU5XZWZ3N2phMHpyV0d5X3hTOFZr?oc=5",
+      "observed_at": "2026-08-13T17:59:24+07:00",
+      "published_at": "2026-08-07T17:04:33+07:00",
+      "status": "unverified",
+      "source_confidence": "secondary",
+      "funnel_stage": "Market monitoring",
+      "summary": "Secondary-source signal. Open and validate against the broker's official page before using it in a decision.",
+      "takeaway": "Verify official entity, market eligibility and terms before classifying the campaign.",
+      "metrics": {
+        "views": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null
+      },
+      "signal_score": 45
+    },
+    {
+      "id": "news-9d7ffa57cdf1",
+      "brand": "Industry signal",
+      "market": "ID",
+      "kind": "news_signal",
+      "platform": "News RSS",
+      "title": "Lbank meluncurkan kampanye hadiah senilai $500.000 bekerja sama dengan Pudgy Penguins - tradersunion.com",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZ0pLSkNHSHFzd05kQzh3UF9KQVVBZEdINmZ5NmpVVjZQTlVteFEtdVRhbmtROW9hLS13ajlJdnR3MXotRkU3c2Y4VnR2dkVHQkF4LU9NUWNQVnpNRmstQ2NNYTFOV1VZVDFubVlLeXVVdE1vZ1VWdkdoYUdHYTdkZ3ZXa1Uta2JYV08yQ1g2NmhYX1c5Mk9MVlZrWk9QUzllNVhKYQ?oc=5",
+      "observed_at": "2026-08-13T17:59:24+07:00",
+      "published_at": "2026-08-07T15:22:29+07:00",
+      "status": "unverified",
+      "source_confidence": "secondary",
+      "funnel_stage": "Market monitoring",
+      "summary": "Secondary-source signal. Open and validate against the broker's official page before using it in a decision.",
+      "takeaway": "Verify official entity, market eligibility and terms before classifying the campaign.",
+      "metrics": {
+        "views": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null
+      },
+      "signal_score": 45
+    },
+    {
+      "id": "news-0d84fffaa0ec",
+      "brand": "Industry signal",
+      "market": "TH",
+      "kind": "news_signal",
+      "platform": "News RSS",
+      "title": "10 โบรกเกอร์ Forex โบนัสฟรี 2026 ต้องฝากไหม ถอนกำไรได้ไหม เปรียบเทียบ - Mitrade",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOU210T0xnRVdtM1JQMkxibjZyZ0JSUU9sRDRhZzZ6akxxTTFhaHE1eVM4Q1VPZXFsUHhnRGFuQzlHYWVrUF9KU1NUMmhCR203NGZuT05WQXNYemo4SHdwS3VEcUd4YzlkTGpuV1BGUVhMLTUwMWctTm43c09yVmExeDRISi11Sl85TWQxREdXRk1UYWc?oc=5",
+      "observed_at": "2026-08-13T17:59:24+07:00",
+      "published_at": "2026-08-02T14:00:00+07:00",
+      "status": "unverified",
+      "source_confidence": "secondary",
+      "funnel_stage": "Market monitoring",
+      "summary": "Secondary-source signal. Open and validate against the broker's official page before using it in a decision.",
+      "takeaway": "Verify official entity, market eligibility and terms before classifying the campaign.",
+      "metrics": {
+        "views": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null
+      },
+      "signal_score": 45
+    }
+  ],
+  "strategies": [
+    {
+      "name": "Local Market Intelligence Studio",
+      "horizon": "0–30 days",
+      "owner": "Regional Marketing + Local PIC",
+      "objective": "Turn observed competitor signals into localized content and landing-page tests.",
+      "kpis": [
+        "CPQL",
+        "KYC rate",
+        "Qualified lead rate"
+      ],
+      "decision": "Approve one 30-day content pilot per priority market."
+    },
+    {
+      "name": "Activation & Retention Missions",
+      "horizon": "30–60 days",
+      "owner": "CRM + Product + Compliance",
+      "objective": "Test mission-based onboarding and progressive rewards against a non-incentivized cohort.",
+      "kpis": [
+        "FTD to Active",
+        "D30 retention",
+        "Contribution margin"
+      ],
+      "decision": "Confirm reward ceiling and fraud controls."
+    },
+    {
+      "name": "Creator & IB Governance Engine",
+      "horizon": "45–90 days",
+      "owner": "Partnerships + Compliance",
+      "objective": "Give partners approved claims, templates, tracking links and a quality scorecard.",
+      "kpis": [
+        "Qualified FTD",
+        "Active client rate",
+        "Margin by partner"
+      ],
+      "decision": "Assign partner-data owner and review cadence."
+    }
+  ]
+}
