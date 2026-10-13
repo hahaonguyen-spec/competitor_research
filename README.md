@@ -1,52 +1,52 @@
-# SEA Broker Competitor Intelligence
+# Marketing Agent Hub
 
-Dashboard theo dõi social media, promotion và marketing signals của broker tại Indonesia, Thailand, Philippines và Việt Nam.
+Website điều phối 13 marketing agents, tích hợp với dashboard competitor intelligence hiện có.
 
-## Dashboard logic
+## Agent team
 
-`Official source → Signal → CPT takeaway → Strategic bet → Business KPI`
+1. Marketing Orchestrator
+2. Competitor Intelligence
+3. Audience Insight
+4. Campaign Strategist
+5. Paid Media Optimizer
+6. CRO & Journey
+7. Creative Brief
+8. SEO & Content
+9. Social Listening
+10. Lifecycle & CRM
+11. Analytics & Attribution
+12. Localization QA
+13. Compliance & Risk
 
-- Promotion được gắn nhãn `live`, `ended`, `monitor` hoặc `unverified`.
-- Metric social không công khai luôn giữ `N/A`.
-- Tin từ nguồn thứ cấp chỉ là tín hiệu; phải đối chiếu website/T&C chính thức trước khi dùng.
-- KPI business nên nối theo funnel: Lead → Qualified Lead → KYC → FTD → Active Client → Contribution Margin.
+## Website features
 
-## Automatic scan schedule
+- Mission Control chọn agent phù hợp từ mục tiêu, thị trường, funnel và channel.
+- Tạo workflow theo giai đoạn, owner, KPI và approval gate.
+- Sáu playbook: Competitor Pulse, Campaign Launch, Lead Quality Loop, Content Engine, Retention Recovery và Promotion Control.
+- Lưu tối đa sáu mission gần nhất trong browser local storage.
+- Copy kế hoạch hoặc xuất JSON.
+- Tích hợp `data/latest.json` từ competitor scanner hiện có.
+- Responsive và triển khai được trực tiếp qua GitHub Pages.
 
-GitHub Actions chạy mỗi ngày lúc **00:00, 06:00, 12:00 và 18:00 giờ Việt Nam**. Workflow dùng cron UTC `0 5,11,17,23 * * *`.
+## Important operating rule
 
-Scanner hiện hỗ trợ:
-
-- Official websites, promotion pages and regulator pages.
-- Google News RSS as a secondary early-warning feed.
-- Facebook Page posts when `META_ACCESS_TOKEN` and `meta_pages` are configured.
-- Safe fallback: if a source is temporarily blocked, the last verified record is retained and the error is logged.
-
-Instagram/Facebook engagement, TikTok and private ad data require authorized platform APIs. The dashboard does not fabricate these metrics.
+Website là lớp planning và coordination. Nó không tự gửi email, xuất bản nội dung, thay đổi campaign hoặc tăng ngân sách. Những hành động này luôn cần human approval và integration/API riêng.
 
 ## Run locally
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python scripts/scan.py
-python -m http.server 8000
+python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000`.
+Mở `http://localhost:8000`.
 
-## Add sources
+## Existing scanner
 
-Edit `config/sources.json`:
+Giữ nguyên:
 
-- `sources`: official HTML/PDF pages.
-- `news_feeds`: RSS feeds used only as unverified market signals.
-- `meta_pages`: Facebook Page IDs, brand and market; also add repository secret `META_ACCESS_TOKEN`.
-- `youtube_channels`: reserved for official YouTube channel feeds.
+- `config/sources.json`
+- `scripts/scan.py`
+- `data/latest.json`
+- GitHub Actions scan, test và Pages deployment.
 
-## Data files
-
-- `data/latest.json`: current dashboard dataset.
-- `data/history/`: snapshots created before each successful refresh.
-
+Scanner tiếp tục cập nhật dữ liệu competitor; giao diện mới đọc dữ liệu đó trong phần **Live Intelligence**.
