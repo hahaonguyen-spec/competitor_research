@@ -3,88 +3,182 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SEA broker social media and promotion intelligence dashboard">
-  <title>SEA Broker Intelligence</title>
+  <meta name="description" content="Marketing Agent Hub — lập kế hoạch, điều phối và kiểm soát các workflow marketing từ competitor research đến campaign optimization.">
+  <meta name="theme-color" content="#0d1715">
+  <title>Marketing Agent Hub</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="app-shell">
     <aside class="sidebar">
-      <a class="brand" href="#overview"><span class="brand-mark">CR</span><span>Competitor<br>Research</span></a>
-      <nav>
-        <a class="active" href="#overview">Executive overview</a>
-        <a href="#signals">Social & campaigns</a>
-        <a href="#promotions">Promotion tracker</a>
-        <a href="#strategies">Strategic bets</a>
+      <a class="brand" href="#overview" aria-label="Marketing Agent Hub">
+        <span class="brand-mark">M</span>
+        <span><strong>Marketing</strong><small>Agent Hub</small></span>
+      </a>
+
+      <nav aria-label="Điều hướng chính">
+        <a class="active" href="#overview" data-section="overview"><span>01</span>Tổng quan</a>
+        <a href="#mission" data-section="mission"><span>02</span>Mission control</a>
+        <a href="#agents" data-section="agents"><span>03</span>Agent team</a>
+        <a href="#workflows" data-section="workflows"><span>04</span>Workflow</a>
+        <a href="#intelligence" data-section="intelligence"><span>05</span>Competitor intel</a>
+        <a href="#guardrails" data-section="guardrails"><span>06</span>Kiểm soát</a>
       </nav>
-      <div class="schedule-note"><span class="pulse"></span> Auto scan<br><strong>00 · 06 · 12 · 18 ICT</strong></div>
+
+      <div class="system-card">
+        <div class="system-row"><span class="pulse"></span><strong>System online</strong></div>
+        <p>Planner chạy trong trình duyệt. Scanner đồng bộ qua GitHub Actions.</p>
+        <span id="sidebar-scan">Đang kiểm tra dữ liệu…</span>
+      </div>
     </aside>
 
     <main>
-      <header id="overview">
-        <div>
-          <p class="eyebrow">SEA MARKET INTELLIGENCE</p>
-          <h1>Signals that lead to decisions.</h1>
-          <p class="lede">Theo dõi social, promotion và marketing moves tại Indonesia, Thailand, Philippines và Việt Nam.</p>
+      <section id="overview" class="hero section-anchor">
+        <div class="topbar">
+          <span class="eyebrow">MARKETING OPERATING SYSTEM</span>
+          <div class="date-chip" id="today"></div>
         </div>
-        <div class="freshness"><span>Last scan</span><strong id="last-scan">Loading…</strong><small id="scan-health"></small></div>
-      </header>
-
-      <section class="kpi-grid" aria-label="Executive metrics">
-        <article><span>Tracked signals</span><strong id="kpi-signals">—</strong><small>Official + secondary watchlist</small></article>
-        <article><span>Live campaigns</span><strong id="kpi-live">—</strong><small>Official page evidence</small></article>
-        <article><span>Social signals</span><strong id="kpi-social">—</strong><small>Posts + social campaigns</small></article>
-        <article><span>Compliance flags</span><strong id="kpi-risk">—</strong><small>Require local validation</small></article>
-      </section>
-
-      <section class="filters" aria-label="Dashboard filters">
-        <div class="filter-group" id="market-filters">
-          <button class="selected" data-market="ALL">All markets</button>
-          <button data-market="ID">Indonesia</button><button data-market="TH">Thailand</button>
-          <button data-market="PH">Philippines</button><button data-market="VN">Vietnam</button>
+        <div class="hero-grid">
+          <div>
+            <p class="hero-kicker"><span></span>13 agent · 1 decision system</p>
+            <h1>Biến tín hiệu marketing thành <em>quyết định có thể hành động.</em></h1>
+            <p class="lede">Một trung tâm điều phối cho research, campaign, content, CRM, paid media, analytics, localization và compliance — với đầu ra, KPI và người phê duyệt rõ ràng.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#mission">Tạo mission mới <span>↗</span></a>
+              <a class="button secondary" href="#agents">Xem đội agent</a>
+            </div>
+          </div>
+          <div class="command-visual" aria-label="Sơ đồ điều phối agent">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="core"><span>MO</span><strong>Orchestrator</strong><small>Plan · Route · Review</small></div>
+            <span class="satellite s1">Research</span><span class="satellite s2">Campaign</span>
+            <span class="satellite s3">Content</span><span class="satellite s4">Analytics</span>
+          </div>
         </div>
-        <label>Type
-          <select id="kind-filter"><option value="ALL">All signals</option><option value="social">Social</option><option value="promotion">Promotions</option><option value="compliance">Compliance</option><option value="news_signal">News watch</option></select>
-        </label>
-        <label>Status
-          <select id="status-filter"><option value="ALL">All statuses</option><option value="live">Live</option><option value="ended">Ended</option><option value="monitor">Monitor</option><option value="unverified">Unverified</option></select>
-        </label>
-      </section>
-
-      <section id="signals" class="section-block">
-        <div class="section-heading"><div><p class="eyebrow">WHAT DESERVES ATTENTION</p><h2>Social & campaign intelligence</h2></div><span id="result-count"></span></div>
-        <div id="signal-grid" class="signal-grid" aria-live="polite"></div>
-      </section>
-
-      <section id="promotions" class="section-block">
-        <div class="section-heading"><div><p class="eyebrow">PROMOTION CONTROL</p><h2>Live, ended or unverified?</h2></div></div>
-        <div class="table-wrap">
-          <table><thead><tr><th>Brand / market</th><th>Program</th><th>Funnel</th><th>Status</th><th>Evidence</th></tr></thead><tbody id="promotion-rows"></tbody></table>
+        <div class="metric-strip">
+          <article><span>Specialist agents</span><strong>13</strong><small>từ insight đến retention</small></article>
+          <article><span>Ready workflows</span><strong>6</strong><small>có checkpoint phê duyệt</small></article>
+          <article><span>SEA markets</span><strong>4</strong><small>VN · ID · TH · PH</small></article>
+          <article><span>Governance</span><strong>HITL</strong><small>human in the loop</small></article>
         </div>
       </section>
 
-      <section id="strategies" class="section-block">
-        <div class="section-heading"><div><p class="eyebrow">FROM SIGNAL TO IMPACT</p><h2>90-day strategic bets</h2></div></div>
-        <div id="strategy-grid" class="strategy-grid"></div>
+      <section id="mission" class="section-block section-anchor">
+        <div class="section-heading">
+          <div><span class="eyebrow">MISSION CONTROL</span><h2>Từ brief rời rạc đến kế hoạch phối hợp.</h2></div>
+          <p>Mô tả mục tiêu; hệ thống sẽ chọn agent, chia giai đoạn và đề xuất KPI.</p>
+        </div>
+        <div class="mission-layout">
+          <form id="mission-form" class="mission-form">
+            <label class="wide">Mục tiêu marketing
+              <textarea id="mission-goal" rows="4" required placeholder="Ví dụ: Ra mắt webinar Forex Basics tại Việt Nam, thu hút lead có khả năng hoàn thành KYC với ngân sách 5.000 USD."></textarea>
+            </label>
+            <label>Thị trường
+              <select id="mission-market"><option value="VN">Việt Nam</option><option value="ID">Indonesia</option><option value="TH">Thailand</option><option value="PH">Philippines</option><option value="SEA">SEA multi-market</option></select>
+            </label>
+            <label>Funnel
+              <select id="mission-funnel"><option value="awareness">Awareness</option><option value="consideration">Consideration</option><option value="lead" selected>Lead generation</option><option value="conversion">Conversion</option><option value="retention">Retention</option></select>
+            </label>
+            <label>Kênh chính
+              <select id="mission-channel"><option value="multi">Multi-channel</option><option value="paid">Paid media</option><option value="content">Content / SEO</option><option value="social">Social media</option><option value="email">CRM / Email</option><option value="web">Website / CRO</option></select>
+            </label>
+            <label>Mức ưu tiên
+              <select id="mission-priority"><option value="normal">Standard</option><option value="fast">Fast track</option><option value="high-risk">High-risk / regulated</option></select>
+            </label>
+            <button class="button primary wide" type="submit">Build mission plan <span>→</span></button>
+            <p class="form-note wide">Không gửi dữ liệu ra ngoài. Kế hoạch được tạo và lưu cục bộ trên trình duyệt này.</p>
+          </form>
+
+          <div id="mission-output" class="mission-output empty-state" aria-live="polite">
+            <div class="empty-icon">◎</div>
+            <h3>Chưa có mission</h3>
+            <p>Điền brief để nhận agent squad, workflow, KPI và approval gates.</p>
+          </div>
+        </div>
+        <div id="saved-plans" class="saved-plans"></div>
       </section>
 
-      <footer>Metrics that are not publicly available remain N/A. Validate entity, eligibility and terms before launch.</footer>
+      <section id="agents" class="section-block section-anchor">
+        <div class="section-heading">
+          <div><span class="eyebrow">AGENT DIRECTORY</span><h2>Đội ngũ chuyên môn, không phải một chatbot chung chung.</h2></div>
+          <p>Mỗi agent có phạm vi, đầu vào, đầu ra và checkpoint riêng.</p>
+        </div>
+        <div class="toolbar">
+          <div class="agent-filters" id="agent-filters">
+            <button class="selected" data-agent-filter="all">Tất cả</button>
+            <button data-agent-filter="strategy">Strategy</button>
+            <button data-agent-filter="growth">Growth</button>
+            <button data-agent-filter="content">Content</button>
+            <button data-agent-filter="operations">Operations</button>
+            <button data-agent-filter="governance">Governance</button>
+          </div>
+          <label class="search"><span>⌕</span><input id="agent-search" type="search" placeholder="Tìm agent…"></label>
+        </div>
+        <div id="agent-grid" class="agent-grid"></div>
+      </section>
+
+      <section id="workflows" class="section-block section-anchor">
+        <div class="section-heading">
+          <div><span class="eyebrow">PLAYBOOK LIBRARY</span><h2>Workflow đã sắp thứ tự và có điểm dừng.</h2></div>
+          <p>Bắt đầu từ một playbook, sau đó tinh chỉnh trong Mission Control.</p>
+        </div>
+        <div id="workflow-grid" class="workflow-grid"></div>
+      </section>
+
+      <section id="intelligence" class="section-block section-anchor">
+        <div class="section-heading">
+          <div><span class="eyebrow">LIVE INTELLIGENCE</span><h2>Competitor signals đang được theo dõi.</h2></div>
+          <div class="scan-status"><span class="pulse"></span><div><small>Lần quét gần nhất</small><strong id="last-scan">Đang tải…</strong></div></div>
+        </div>
+        <div class="intel-controls">
+          <div id="market-filters" class="market-filters">
+            <button class="selected" data-market="ALL">Tất cả</button><button data-market="VN">VN</button>
+            <button data-market="ID">ID</button><button data-market="TH">TH</button><button data-market="PH">PH</button>
+          </div>
+          <select id="kind-filter" aria-label="Lọc loại signal"><option value="ALL">Mọi loại signal</option><option value="promotion">Promotion</option><option value="social">Social</option><option value="compliance">Compliance</option><option value="news_signal">News watch</option></select>
+        </div>
+        <div class="intel-kpis">
+          <div><span>Total signals</span><strong id="kpi-signals">—</strong></div>
+          <div><span>Live campaigns</span><strong id="kpi-live">—</strong></div>
+          <div><span>Risk flags</span><strong id="kpi-risk">—</strong></div>
+          <div><span>Sources healthy</span><strong id="kpi-health">—</strong></div>
+        </div>
+        <div id="signal-grid" class="signal-grid"></div>
+        <p class="intel-note">Chỉ hiển thị dữ liệu công khai. Signal chưa xác minh không được coi là fact; luôn mở nguồn gốc trước khi ra quyết định.</p>
+      </section>
+
+      <section id="guardrails" class="section-block section-anchor">
+        <div class="guardrail-panel">
+          <div><span class="eyebrow light">OPERATING GUARDRAILS</span><h2>Tăng tốc mà không bỏ qua kiểm soát.</h2><p>Agent tạo phân tích và đề xuất. Con người chịu trách nhiệm phê duyệt claim, ngân sách, audience, dữ liệu khách hàng và hành động xuất bản.</p></div>
+          <div class="guardrail-list">
+            <article><span>01</span><div><strong>Evidence first</strong><p>Mọi competitor fact cần URL, ngày quan sát và trạng thái xác minh.</p></div></article>
+            <article><span>02</span><div><strong>Quality over volume</strong><p>Báo cáo tách lead volume khỏi qualified lead và sales outcome.</p></div></article>
+            <article><span>03</span><div><strong>Approval before action</strong><p>Không tự gửi email, tăng ngân sách, xuất bản hoặc thay đổi campaign.</p></div></article>
+            <article><span>04</span><div><strong>Privacy by design</strong><p>Không nhập PII, token hoặc dữ liệu khách hàng nhạy cảm vào website tĩnh.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <footer><span>Marketing Agent Hub</span><p>Built for evidence-led marketing decisions · GitHub Pages ready</p></footer>
     </main>
   </div>
-  <template id="signal-template">
-    <article class="signal-card">
-      <div class="card-top"><span class="market-chip"></span><span class="score"></span></div>
-      <div class="brand-line"><span class="brand-name"></span><span class="platform"></span></div>
-      <h3></h3><p class="summary"></p>
-      <div class="metrics"></div>
-      <div class="takeaway"><span>CPT takeaway</span><p></p></div>
-      <div class="card-footer"><span class="status"></span><a target="_blank" rel="noopener">Open source ↗</a></div>
+
+  <dialog id="agent-dialog">
+    <button class="dialog-close" aria-label="Đóng">×</button>
+    <div id="agent-detail"></div>
+  </dialog>
+
+  <template id="agent-template">
+    <article class="agent-card">
+      <div class="agent-top"><span class="agent-index"></span><span class="agent-status"><i></i>Ready</span></div>
+      <div class="agent-icon"></div><span class="agent-category"></span><h3></h3><p class="agent-description"></p>
+      <div class="agent-output"></div><button class="text-button" type="button">Xem operating brief <span>↗</span></button>
     </article>
   </template>
+
   <script src="app.js" defer></script>
 </body>
 </html>
-
