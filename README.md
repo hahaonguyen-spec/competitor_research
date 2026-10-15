@@ -20,6 +20,8 @@ Website điều phối 13 marketing agents, tích hợp với dashboard competit
 
 ## Website features
 
+- Bốn chế độ one-click: Launch Campaign, Research Competitor, Lead Quality và Content Plan.
+- Mỗi nút tự điền brief mẫu đầy đủ, chọn đúng đội agent và chạy thẳng đến plan, task và tracking.
 - Project intake thu thập goal, context, audience, budget, deadline, KPI, assets và constraints.
 - Mission Control tự chọn agent, chạy tuần tự và tạo project plan hoàn chỉnh.
 - Tạo implementation backlog với phase, deliverable, owner, deadline và trạng thái.
