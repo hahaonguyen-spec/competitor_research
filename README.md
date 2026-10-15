@@ -20,11 +20,14 @@ Website điều phối 13 marketing agents, tích hợp với dashboard competit
 
 ## Website features
 
-- Mission Control chọn agent phù hợp từ mục tiêu, thị trường, funnel và channel.
-- Tạo workflow theo giai đoạn, owner, KPI và approval gate.
+- Project intake thu thập goal, context, audience, budget, deadline, KPI, assets và constraints.
+- Mission Control tự chọn agent, chạy tuần tự và tạo project plan hoàn chỉnh.
+- Tạo implementation backlog với phase, deliverable, owner, deadline và trạng thái.
+- Tracking specification gồm event taxonomy, UTM dimensions, KPI và decision formulas.
+- Task progress được cập nhật và lưu trong browser local storage.
 - Sáu playbook: Competitor Pulse, Campaign Launch, Lead Quality Loop, Content Engine, Retention Recovery và Promotion Control.
-- Lưu tối đa sáu mission gần nhất trong browser local storage.
-- Copy kế hoạch hoặc xuất JSON.
+- Lưu tối đa tám project gần nhất trong browser local storage.
+- Copy kế hoạch, xuất project JSON hoặc task CSV.
 - Tích hợp `data/latest.json` từ competitor scanner hiện có.
 - Responsive và triển khai được trực tiếp qua GitHub Pages.
 
