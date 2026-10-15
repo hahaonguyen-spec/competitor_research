@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="project.css">
 </head>
 <body>
   <div class="app-shell">
@@ -68,13 +69,22 @@
 
       <section id="mission" class="section-block section-anchor">
         <div class="section-heading">
-          <div><span class="eyebrow">MISSION CONTROL</span><h2>Từ brief rời rạc đến kế hoạch phối hợp.</h2></div>
-          <p>Mô tả mục tiêu; hệ thống sẽ chọn agent, chia giai đoạn và đề xuất KPI.</p>
+          <div><span class="eyebrow">MISSION CONTROL</span><h2>Nhập project một lần. Hệ thống tự lập kế hoạch và tracking.</h2></div>
+          <p>Planning engine sẽ chọn agent, chạy theo thứ tự, tạo timeline, task owners, KPI và bảng tiến độ.</p>
         </div>
         <div class="mission-layout">
           <form id="mission-form" class="mission-form">
-            <label class="wide">Mục tiêu marketing
-              <textarea id="mission-goal" rows="4" required placeholder="Ví dụ: Ra mắt webinar Forex Basics tại Việt Nam, thu hút lead có khả năng hoàn thành KYC với ngân sách 5.000 USD."></textarea>
+            <label class="wide">Tên project
+              <input id="project-name" required placeholder="Ví dụ: Vietnam Webinar Lead Generation — Q4">
+            </label>
+            <label class="wide">Project goal
+              <textarea id="mission-goal" rows="3" required placeholder="Kết quả kinh doanh cần đạt, đối tượng và thời hạn. Ví dụ: Thu hút lead có khả năng hoàn thành KYC cho webinar tại Việt Nam."></textarea>
+            </label>
+            <label class="wide">Bối cảnh và thông tin cần biết
+              <textarea id="project-context" rows="3" placeholder="Tình trạng hiện tại, insight đã có, campaign trước, sản phẩm/offer, nguồn tham khảo…"></textarea>
+            </label>
+            <label class="wide">Target audience
+              <input id="project-audience" placeholder="Ví dụ: Người mới tìm hiểu forex, 25–44 tuổi, Việt Nam">
             </label>
             <label>Thị trường
               <select id="mission-market"><option value="VN">Việt Nam</option><option value="ID">Indonesia</option><option value="TH">Thailand</option><option value="PH">Philippines</option><option value="SEA">SEA multi-market</option></select>
@@ -88,17 +98,32 @@
             <label>Mức ưu tiên
               <select id="mission-priority"><option value="normal">Standard</option><option value="fast">Fast track</option><option value="high-risk">High-risk / regulated</option></select>
             </label>
-            <button class="button primary wide" type="submit">Build mission plan <span>→</span></button>
-            <p class="form-note wide">Không gửi dữ liệu ra ngoài. Kế hoạch được tạo và lưu cục bộ trên trình duyệt này.</p>
+            <label>Ngân sách dự kiến
+              <input id="project-budget" placeholder="Ví dụ: USD 5,000">
+            </label>
+            <label>Deadline
+              <input id="project-deadline" type="date" required>
+            </label>
+            <label class="wide">KPI / target bắt buộc
+              <input id="project-kpi" placeholder="Ví dụ: 120 qualified leads, CPQL ≤ USD 35">
+            </label>
+            <label class="wide">Tài sản và nguồn lực sẵn có
+              <input id="project-assets" placeholder="Landing page, CRM list, creative cũ, sales team, webinar speaker…">
+            </label>
+            <label class="wide">Ràng buộc / điều không được làm
+              <input id="project-constraints" placeholder="Compliance, thị trường bị giới hạn, claim cấm, deadline nội bộ…">
+            </label>
+            <button class="button primary wide run-button" type="submit">Chạy toàn bộ agent <span>→</span></button>
+            <p class="form-note wide">Planning engine chạy cục bộ, không gửi dữ liệu ra ngoài. Hệ thống không tự publish, gửi email hoặc thay đổi ngân sách nếu chưa kết nối API và có phê duyệt.</p>
           </form>
 
           <div id="mission-output" class="mission-output empty-state" aria-live="polite">
             <div class="empty-icon">◎</div>
-            <h3>Chưa có mission</h3>
-            <p>Điền brief để nhận agent squad, workflow, KPI và approval gates.</p>
+            <h3>Chưa có project đang chạy</h3>
+            <p>Điền brief để hệ thống tự chạy agent, tạo implementation plan và tracking board.</p>
           </div>
         </div>
-        <div id="saved-plans" class="saved-plans"></div>
+        <div id="saved-projects" class="saved-plans"></div>
       </section>
 
       <section id="agents" class="section-block section-anchor">
