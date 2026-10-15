@@ -24,6 +24,13 @@ const workflows=[
   {id:"promotion-review",name:"Promotion Control",description:"Kiểm tra mechanics, T&C, localization, tracking và readiness trước khi yêu cầu phê duyệt launch.",agents:["campaign","localization","analytics","compliance","orchestrator"],goal:"Rà soát promotion trước launch: mechanics, T&C, tracking, localization và approval owners.",funnel:"conversion",channel:"multi"}
 ];
 
+const quickPresets={
+  "campaign-launch":{name:"30-Day Multi-channel Campaign Launch",goal:"Lập và triển khai campaign thu lead chất lượng tại Việt Nam trong 30 ngày, với creative matrix, media plan, landing journey, tracking và approval gate rõ ràng.",context:"Tạo kế hoạch từ strategy đến launch readiness. Ưu tiên chất lượng lead và khả năng chuyển đổi downstream thay vì chỉ tối ưu lead volume.",audience:"Người trưởng thành tại Việt Nam có nhu cầu phù hợp với sản phẩm, được phân nhóm theo intent và mức độ sẵn sàng chuyển đổi.",market:"VN",priority:"high-risk",budget:"USD 5,000 planning scenario",kpiTarget:"120 qualified leads; CPQL ≤ USD 35; theo dõi lead-to-business outcome",assets:"Landing page hiện có, brand guidelines, creative cũ, CRM và đội sales follow-up",constraints:"Không publish, gửi email, dùng claim hoặc thay đổi ngân sách trước khi owner và Compliance phê duyệt.",days:30},
+  "competitor-pulse":{name:"SEA Competitor Intelligence Sprint",goal:"Tạo competitor intelligence report có bằng chứng cho SEA, ưu tiên thay đổi promotion, positioning, content, SEO và landing page trong 21 ngày.",context:"Chỉ sử dụng nguồn công khai. Mỗi phát hiện phải có URL, ngày quan sát, trạng thái xác minh và strategic implication.",audience:"Marketing Manager, Campaign, Content và Commercial stakeholders tại SEA.",market:"SEA",priority:"normal",budget:"12 analyst hours / week",kpiTarget:"100% high-priority signals có nguồn; weekly action memo; 5 cơ hội được ưu tiên",assets:"Competitor watchlist, official websites, public ad libraries, data/latest.json và historical snapshots",constraints:"Không dùng scraping trái điều khoản; không coi signal chưa xác minh là fact; không sao chép nội dung đối thủ.",days:21},
+  "lead-quality":{name:"Lead Quality Improvement Loop",goal:"Kết nối paid media, landing page, CRM và sales outcome để tăng qualified lead rate trong 30 ngày và xác định điểm nghẽn chính của funnel.",context:"Đánh giá hiệu quả theo qualified lead và downstream outcome; CPL chỉ là chỉ số chẩn đoán, không phải quyết định cuối cùng.",audience:"Lead mới từ paid media được phân nhóm theo source, campaign, creative, market và CRM stage.",market:"VN",priority:"fast",budget:"Giữ nguyên ngân sách hiện tại trong giai đoạn chẩn đoán",kpiTarget:"Tăng qualified lead rate 20%; giảm CPQL 15%; có weekly keep/change/stop decision",assets:"Media export, UTM data, landing analytics, CRM stages và sales disposition",constraints:"Không tăng ngân sách khi chưa có mapping CRM; không gửi PII lên website; mọi thay đổi campaign cần owner duyệt.",days:30},
+  "content-engine":{name:"90-Day SEO & Social Content Engine",goal:"Xây content engine 90 ngày từ search intent và competitor gaps, kết nối từng nội dung với funnel, CTA và chỉ số chuyển đổi.",context:"Ưu tiên topic clusters có nhu cầu rõ, bằng chứng competitor gap và khả năng tái sử dụng trên social, email và landing page.",audience:"Khách hàng tiềm năng đang ở giai đoạn awareness và consideration tại Việt Nam.",market:"VN",priority:"normal",budget:"Internal content production capacity",kpiTarget:"12 priority briefs; 36 social derivatives; engaged sessions và content-assisted leads tăng theo tháng",assets:"Website, Search Console, keyword list, social channels, brand guidelines và SME reviewers",constraints:"Không sao chép competitor; claim cần nguồn; nội dung regulated phải qua Compliance và localization QA.",days:90}
+};
+
 const demoSignals=[
   {brand:"Competitor watchlist",market:"SEA",kind:"promotion",status:"monitor",title:"Promotion pages are being monitored",summary:"Scanner sẽ hiển thị thay đổi từ nguồn chính thức sau lần chạy GitHub Actions tiếp theo.",url:"https://github.com/hahaonguyen-spec/competitor_research"},
   {brand:"System",market:"VN",kind:"compliance",status:"monitor",title:"Evidence-first control is active",summary:"Mọi signal cần nguồn, ngày quan sát và trạng thái xác minh trước khi dùng trong proposal.",url:"https://github.com/hahaonguyen-spec/competitor_research"}
@@ -68,6 +75,16 @@ function useWorkflow(id){
   setTimeout(()=>buildMission({preventDefault(){},workflow}),450);
 }
 
+function quickRun(id){
+  const workflow=workflows.find(item=>item.id===id),preset=quickPresets[id];if(!workflow||!preset||state.runner)return;
+  const deadline=new Date();deadline.setDate(deadline.getDate()+preset.days);
+  const values={"project-name":preset.name,"mission-goal":preset.goal,"project-context":preset.context,"project-audience":preset.audience,"mission-market":preset.market,"mission-funnel":workflow.funnel,"mission-channel":workflow.channel,"mission-priority":preset.priority,"project-budget":preset.budget,"project-deadline":deadline.toISOString().slice(0,10),"project-kpi":preset.kpiTarget,"project-assets":preset.assets,"project-constraints":preset.constraints};
+  Object.entries(values).forEach(([id,value])=>{$(`#${id}`).value=value});
+  document.querySelectorAll("[data-quick-run]").forEach(button=>button.classList.toggle("selected",button.dataset.quickRun===id));
+  document.querySelector("#mission-output").scrollIntoView({behavior:"smooth",block:"center"});
+  buildMission({preventDefault(){},workflow});
+}
+
 function selectSquad(goal,funnel,channel,priority,preferred=[]){
   const ids=new Set(["orchestrator","analytics",...preferred]);const text=goal.toLowerCase();
   if(/đối thủ|competitor|market|research|promotion/.test(text))ids.add("competitor");
@@ -94,7 +111,7 @@ const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 
 async function buildMission(event){
   event.preventDefault();if(state.runner)return;const workflow=event.workflow;const brief=readProjectForm();if(!brief.name||!brief.goal||!brief.deadline){$("#mission-form").reportValidity();return}
-  const combined=`${brief.goal} ${brief.context} ${brief.audience} ${brief.constraints}`;const squad=selectSquad(combined,brief.funnel,brief.channel,brief.priority,workflow?.agents||[]);const now=new Date();const id=`MH-${now.toISOString().slice(2,10).replaceAll("-","")}-${String(now.getHours()).padStart(2,"0")}${String(now.getMinutes()).padStart(2,"0")}`;
+  const combined=`${brief.goal} ${brief.context} ${brief.audience} ${brief.constraints}`;const squad=selectSquad(combined,brief.funnel,brief.channel,brief.priority,workflow?.agents||[]);const now=new Date();const id=`MH-${now.toISOString().slice(2,10).replaceAll("-","")}-${String(now.getHours()).padStart(2,"0")}${String(now.getMinutes()).padStart(2,"0")}${String(now.getSeconds()).padStart(2,"0")}`;
   const project={...brief,id,created_at:now.toISOString(),agents:squad.map(agent=>agent.id),phases:buildPhases(squad,brief.goal),kpis:kpisFor(brief.funnel),readiness:completeness(brief)};
   project.tasks=buildTasks(project,squad);project.tracking=buildTracking(project);project.risks=buildRisks(project);state.runner=true;await runAgents(project,squad);state.runner=false;state.activeProject=project;saveProject(project);renderProject(project,"plan");
 }
@@ -180,6 +197,7 @@ function init(){
   const defaultDeadline=new Date();defaultDeadline.setDate(defaultDeadline.getDate()+21);$("#project-deadline").value=defaultDeadline.toISOString().slice(0,10);
   renderAgents();renderWorkflows();renderSavedProjects();loadIntelligence();
   $("#mission-form").addEventListener("submit",buildMission);$("#agent-dialog .dialog-close").addEventListener("click",()=>$("#agent-dialog").close());
+  document.querySelectorAll("[data-quick-run]").forEach(button=>button.addEventListener("click",()=>quickRun(button.dataset.quickRun)));
   $("#agent-dialog").addEventListener("click",event=>{if(event.target===$("#agent-dialog"))$("#agent-dialog").close()});
   document.querySelectorAll("[data-agent-filter]").forEach(button=>button.addEventListener("click",()=>{document.querySelectorAll("[data-agent-filter]").forEach(item=>item.classList.remove("selected"));button.classList.add("selected");state.agentFilter=button.dataset.agentFilter;renderAgents()}));
   $("#agent-search").addEventListener("input",event=>{state.agentSearch=event.target.value;renderAgents()});
