@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-03T06:49:52+07:00",
+  "generated_at": "2026-11-03T19:42:33+07:00",
   "timezone": "Asia/Ho_Chi_Minh",
   "scan_health": {
     "sources_total": 15,
-    "sources_ok": 8,
-    "sources_failed": 7,
+    "sources_ok": 6,
+    "sources_failed": 9,
     "changed_sources": 2,
-    "new_signals": 1,
+    "new_signals": 0,
     "failures": [
       {
         "id": "xm-vn-promotions",
@@ -17,12 +17,20 @@
         "error": "('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))"
       },
       {
+        "id": "hfm-ph-loyalty",
+        "error": "403 Client Error: Forbidden for url: https://www.hfm.com/int/tl/promotions/loyalty-program"
+      },
+      {
         "id": "xm-ph-competitions",
         "error": "403 Client Error: Forbidden for url: https://partners.xm.com/ph/social-competitions"
       },
       {
         "id": "xm-th-competitions",
         "error": "403 Client Error: Forbidden for url: https://partners.xm.com/th/social-competitions"
+      },
+      {
+        "id": "exness-bonus-policy",
+        "error": "403 Client Error: Forbidden for url: https://get.exness.help/hc/id/articles/8633840208540-Apakah-Exness-menawarkan-bonus"
       },
       {
         "id": "vantage-world-cup-social-2026",
@@ -47,7 +55,7 @@
       "platform": "Website",
       "title": "Five-tier XMP loyalty program",
       "url": "https://www.xmtrading.com/vn/promotions/loyalty-program",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "status": "live",
       "source_confidence": "official",
       "funnel_stage": "Retention",
@@ -70,7 +78,7 @@
       "platform": "Website",
       "title": "Trading Rewards Loyalty Program | HFM",
       "url": "https://www.hfm.com/int/tl/promotions/loyalty-program",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "status": "live",
       "source_confidence": "official",
       "funnel_stage": "Activation + Retention",
@@ -85,7 +93,8 @@
       "content_hash": "ffa21c2eed2c8888b97b95ba6ed1d04d6a0437b96922f4f5d31da3dbe2922fa7",
       "changed": false,
       "http_status": 200,
-      "signal_score": 92
+      "signal_score": 92,
+      "last_error": "403 Client Error: Forbidden for url: https://www.hfm.com/int/tl/promotions/loyalty-program"
     },
     {
       "id": "xm-vn-promotions",
@@ -95,7 +104,7 @@
       "platform": "Website",
       "title": "XMTrading promotion ecosystem",
       "url": "https://www.xmtrading.com/vn/promotions",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "status": "live",
       "source_confidence": "official",
       "funnel_stage": "Acquisition + Retention",
@@ -118,7 +127,7 @@
       "platform": "Partner / Social",
       "title": "Weekly demo, daily and crypto competitions",
       "url": "https://partners.xm.com/ph/social-competitions",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "status": "live",
       "source_confidence": "official",
       "funnel_stage": "Acquisition + Activation",
@@ -141,7 +150,7 @@
       "platform": "Partner / Social",
       "title": "Localized Thai trading competitions",
       "url": "https://partners.xm.com/th/social-competitions",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "status": "live",
       "source_confidence": "official",
       "funnel_stage": "Acquisition + Activation",
@@ -164,7 +173,7 @@
       "platform": "Thai SEC",
       "title": "Investor Alert",
       "url": "https://market.sec.or.th/public/idisc/en/InvestorAlert",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "status": "monitor",
       "source_confidence": "official",
       "funnel_stage": "Risk control",
@@ -176,7 +185,7 @@
         "comments": null,
         "shares": null
       },
-      "content_hash": "0155705f696e8f794a05ef32fe8b5e0199b34484f1336158c0a9381bac45d373",
+      "content_hash": "5389a0c31e78ac239a8a309916e7f8993cf9a1a776f7c17dd2191f90e517cc40",
       "changed": true,
       "http_status": 200,
       "signal_score": 70
@@ -189,7 +198,7 @@
       "platform": "Philippines SEC",
       "title": "Advisories - Securities and Exchange Commission Appointment System",
       "url": "https://appointment.sec.gov.ph/investors-education-and-information/advisories/",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "status": "monitor",
       "source_confidence": "official",
       "funnel_stage": "Risk control",
@@ -215,7 +224,7 @@
       "platform": "Vietnam MPS",
       "title": "Cảnh báo các phương thức, thủ đoạn dụ dỗ người dân tham gia đầu tư tài chính, sàn chứng khoán ảo, tiền ảo trên không gian mạng",
       "url": "https://mps.gov.vn/hoi-dap/chi-tiet-cau-hoi/5c8ecbf0-d6c1-411f-ba77-73d27e9c0535?page=%2F",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "status": "monitor",
       "source_confidence": "official",
       "funnel_stage": "Risk control",
@@ -227,7 +236,7 @@
         "comments": null,
         "shares": null
       },
-      "content_hash": "01fa98a0089340c6c3a871419b638c897875dca945de916f73c3216c978175a4",
+      "content_hash": "b97259e728d9acdc2a5676dde0738f9eab6c77008b9ed1ccc0ee589bd882ee08",
       "changed": true,
       "http_status": 200,
       "signal_score": 70
@@ -240,7 +249,7 @@
       "platform": "Social",
       "title": "Own the Moment World Cup social activity",
       "url": "https://www.vantagemarkets.com/pdf/own-the-moment-world-cup-2026-social-activity-tnc-June2026.pdf",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "status": "ended",
       "source_confidence": "official",
       "funnel_stage": "Awareness + Engagement",
@@ -263,7 +272,7 @@
       "platform": "Help Centre",
       "title": "Apakah Exness menawarkan bonus? – Pusat Bantuan Exness",
       "url": "https://get.exness.help/hc/id/articles/8633840208540-Apakah-Exness-menawarkan-bonus",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "status": "monitor",
       "source_confidence": "official",
       "funnel_stage": "Trust + Acquisition",
@@ -278,7 +287,8 @@
       "content_hash": "ac0cd39645bfd654c970cce730dd9717e9617e1a392bd21668a5e7c474c15406",
       "changed": false,
       "http_status": 200,
-      "signal_score": 60
+      "signal_score": 60,
+      "last_error": "403 Client Error: Forbidden for url: https://get.exness.help/hc/id/articles/8633840208540-Apakah-Exness-menawarkan-bonus"
     },
     {
       "id": "news-231233fa3c6b",
@@ -288,31 +298,8 @@
       "platform": "News RSS",
       "title": "KuCoin mengumumkan kampanye dengan APR KCUSD hingga 7% untuk 3.000 pengguna pertama - Traders Union",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVmpKME5XWlBPaWMwekFvUGdVcVlVZHd2VHJkVzJmTHZVVjRZbV9mVk5MQ2pNdDNqaXVqVVd2Zng5T2pQTElkdk9lS1JVYnRXVUo5OXZ4VUJYVnZ6STZLLWo2RENPbUVLam1WRjYwRU0tNUxoQ3h0V1p1WjdjeEY0SXNmXzg2QThVWWxZSjRralhLTkRZUkE0dS1Uc001cE1BZ0E?oc=5",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "published_at": "2026-10-31T11:23:22+07:00",
-      "status": "unverified",
-      "source_confidence": "secondary",
-      "funnel_stage": "Market monitoring",
-      "summary": "Secondary-source signal. Open and validate against the broker's official page before using it in a decision.",
-      "takeaway": "Verify official entity, market eligibility and terms before classifying the campaign.",
-      "metrics": {
-        "views": null,
-        "reactions": null,
-        "comments": null,
-        "shares": null
-      },
-      "signal_score": 45
-    },
-    {
-      "id": "news-00d15911ff48",
-      "brand": "Industry signal",
-      "market": "PH",
-      "kind": "news_signal",
-      "platform": "News RSS",
-      "title": "Philippine Peso: Depreciation tempered by official jawboning – OCBC - www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZ3o5MDlNeVQweTlvSklTdmZIVWd6em5EcVZqcGo5SEhueF9QMFNsYTI2bHZVUk50dU5saUVERnlGZ2lOaFBOTzh3R1U1U2RiMFViSVhUYVlwOXY2T040TWliNGplbUV0bGNERTJVanFXeTFJdDR2aTJpWHJIM3pKVlpDamVsQXdta1N0cEF5SVRlejlET2VuZ3ptRTZFYWE1Wm4wdWVZSjhpTjhSWEdDMzZEZHJST3ZhWUhKdGxMcmtJRzg?oc=5",
-      "observed_at": "2026-11-03T06:49:52+07:00",
-      "published_at": "2026-10-30T11:53:40+07:00",
       "status": "unverified",
       "source_confidence": "secondary",
       "funnel_stage": "Market monitoring",
@@ -334,7 +321,7 @@
       "platform": "News RSS",
       "title": "ZION Philippines expands holiday wellness financing through BDO program - Traders Union",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPNjN2SGlsRGp5VEUwbnJ1aHdsVHNSaDMzUWJDa3laaDJTQTJEZm94VUVhbGhMNnJ6U2ZKSHZSNjQzYUYtQ3VOMVZrT0IwNjVMZXBfLUlySjZTQnJSSG0xS2NnWnhGQ0FoVkxMY0FpTzQzRDVUVXBVVkxlVUwzU2xub2xfMlpfeEZyczN0eTNQSV9TVUk?oc=5",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "published_at": "2026-10-29T10:25:29+07:00",
       "status": "unverified",
       "source_confidence": "secondary",
@@ -357,7 +344,7 @@
       "platform": "News RSS",
       "title": "KuCoin meluncurkan kampanye “trades into treats” dengan hadiah bagi trader Futures baru - Traders Union",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOOUMtSmJfV09aVXY4QnRicExqc0MyVHNVdWlWWVR2dVZJUk5XMEtRQ2dQWHVvZjg1dXFTNHBuTGlLX0lLOGFzNjRnNFBlbzIwbU8yYzUzOEdvYUFmczlVaElEQl9RbmNiZjdXendBZWpvQ21RNmtxT2t2cTQwaVQ2RV9HOUFUaWw3bG1ZNmc0ZEVTOHRFd3VqLWgwdVR4aVVxSUpv?oc=5",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "published_at": "2026-10-28T10:43:18+07:00",
       "status": "unverified",
       "source_confidence": "secondary",
@@ -380,7 +367,7 @@
       "platform": "News RSS",
       "title": "Philippine Peso: Oil Limits Bearish Bias – OCBC - tmgm.com",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQczJvWDhlc3ltRzhuYWNpNVU5TEYwY3pQWnB1X1BoQ01IQ0cwMklNcEtFcnR1X092UmoyaTF1NDh1MUU2RllWd1U0SW1VOFBTSXVwT3pCZjN4UHlVR3FYU1pEQXFiNGdKWnVSbGZ4dkhkRkE0TDdlTWl5VktucWJ0QlRhWnJEN1J1a19TTnJidkNDWnB3Uk5kbTd1a3JJd3pGZWJ0SVRYSTdKNmpVb0F6clE1VmZXY1BBMWc?oc=5",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "published_at": "2026-10-24T06:13:40+07:00",
       "status": "unverified",
       "source_confidence": "secondary",
@@ -403,7 +390,7 @@
       "platform": "News RSS",
       "title": "Philippine Peso: Is oil limiting the bearish bias? – OCBC - www.tmgm.com",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNMDVrR0FYVjRaUlNmQmZVUFE5aGlyVHdWckdyRHg5dHFwOVpOU3VfZVRwVnpzT3JDb0hDTDNpczdEblV3ZWpJdVBHNFZoMlhwU0xpNDgtSkpncmZMel95UWVxMEVJUEZhYlpFVHhwZ3BJTkI3anR4WHVscXBRQTluYXNvVDBpbG5kZ21MOWlwaTJPWWtfdmE4cGNiRG9aYVpnRFZoUkNIengzYmduTGQ3dHo4aDBJeG1vaFZJbQ?oc=5",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "published_at": "2026-10-23T14:00:00+07:00",
       "status": "unverified",
       "source_confidence": "secondary",
@@ -426,7 +413,7 @@
       "platform": "News RSS",
       "title": "Philippine Peso: Bearish but constrained by Oil – OCBC - www.tmgm.com",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRkdHSHF3TmVrRkxlVHplTXN4QUZtSC1tcEotSFhKM3hZWk9PTEs4TWZiQXk5NkdiTFR4SkR2Yzcta19tdUxhdjktZmFuN004ci03NzNyZ0lIUWVhREtfb2VvXzJyNmhtaUFDOUx3eGdIdFF5WFRRMVRqNTRkbWZUYU91R0NzbzBKYVEtcFlYSWs4RG1wU1VGck5RS0dFS09Jb2ZSMWpYcHpSODQtTVl3U2NjT2pDRENi?oc=5",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "published_at": "2026-10-23T14:00:00+07:00",
       "status": "unverified",
       "source_confidence": "secondary",
@@ -449,7 +436,7 @@
       "platform": "News RSS",
       "title": "The Nghi Duc commune police are encouraging businesses to sign commitments to abide by the law. - Vietnam.vn",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPSDdQd1ZUc0t3YmNpQUlLekYzVFJMMFBmeGVvM3VwckQtdm5MU0dNb3hzZC0zdzB0WnMyc2NfaElRZnZoODlkSGVjbmplTndwcktybGVBVE0zS3lxMEdDbC0tOE5GMWh0WGhxRDc5LWVranpDc292R3ZTclZwcXNnZzBnOW8wY241eDJUQXFaeVctbzZ0UmIzaEpFbVlMbEZHS3J5Q2c3ZWNHUQ?oc=5",
-      "observed_at": "2026-11-03T06:49:52+07:00",
+      "observed_at": "2026-11-03T19:42:33+07:00",
       "published_at": "2026-10-23T14:00:00+07:00",
       "status": "unverified",
       "source_confidence": "secondary",
